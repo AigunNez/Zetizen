@@ -1,0 +1,15 @@
+.share-icon {
+    border-radius: 50%;
+    background: #fc4a00;
+    color: #fff;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.list-tags li {
+    border: 1px solid black;
+    border-radius: 1.5rem;
+    padding: 0.25rem 0.75rem;
+}

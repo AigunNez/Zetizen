@@ -1,6 +1,62 @@
-/* .list-navigasi li {
-    border-left: 1px solid white
-} */
+@media (max-width: 575.98px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .text-category {
+        margin-bottom: 10px;
+    }
+
+    .list-category {
+        margin-top: 10px;
+    }
+
+    #navbar-multi-level {
+        position: absolute; 
+        background-color: white;
+    }
+}
+
+@media (min-width:576px) and (max-width:767px) {
+    .container {
+        max-width: 540px !important;
+    }
+
+    #navbar-multi-level {
+        position: absolute; 
+        background-color: white;
+    }
+}
+
+@media (min-width:768px) {
+    .container {
+        max-width: 720px !important;
+    }
+
+    .search {
+        float:right;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        max-width: 960px !important;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        max-width: 1140px !important;
+    }
+}
+
 
 .glide__arrow {
     position: absolute;
@@ -11,21 +67,53 @@
     transform: translateY(-50%);
 }
 
-.category {
-    
+.list-category a {
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+.category {   
     border-radius: 5px;
+}
+
+.tab-active {
+    display: block !important;
+}
+
+.tab-category [data-tab-content], .list-category [data-tab-active] {
+    display: none;
+}
+
+.category-active[data-tab-content] {
+    display: grid;
 }
 
 .kotak-slide, .gambar-slide {
     height: 550px;
 }
 
-.gambar-slide, .gambar-category, .gambar-member {
-    z-index: -1;
+.kotak-slide, .kotak-category {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -250px 36px 4px inset;
 }
 
-.kotak-slide, .kotak-category {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px -200px 36px 4px inset;
+.kotak-slide:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -600px 40px 4px inset;   
+    transition: box-shadow 0.3s ease;
+}
+
+.zoom-content .img-content {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.zoom-content:hover .img-content {
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+.gambar-slide, .gambar-category, .gambar-member {
+    z-index: -1;
 }
 
 .text-latest, .text-category, .text-member {
@@ -64,4 +152,14 @@ footer {
 
 .zetizen-top li {
     margin-top: 13px;
+}
+
+.search, .search input {
+    border:1px solid #ddd;
+    border-width: 0 0 1px;
+}
+
+input[type="text"]{
+    border: none;
+    outline: none;
 }

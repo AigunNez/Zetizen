@@ -1,3 +1,30 @@
+const tabs = document.querySelectorAll('[data-tab-target]');
+const tabContents = document.querySelectorAll('[data-tab-content]');
+const tabActive = document.querySelectorAll('[data-tab-active]');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const target = document.querySelector(tab.dataset.tabTarget);
+
+    tabActive.forEach(activeTab => {
+      activeTab.classList.remove('tab-active');
+    });
+
+    tabContents.forEach(tabContent => {
+      tabContent.classList.remove('category-active');
+    });
+
+    tabs.forEach(tab => {
+      tab.classList.remove('active');
+    });
+
+    tab.classList.add('active');
+    target.classList.add('category-active');
+    tab.querySelector('[data-tab-active]').classList.add('tab-active');
+  });
+});
+
+
 const config = {
     type: 'carousel',
     startAt: 0,

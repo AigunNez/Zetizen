@@ -1,0 +1,9 @@
+.category-main {
+    background-color: #007bff;
+}
+
+@media (max-width: 578px) {
+    .list-tag li {
+        margin-bottom: 20px;
+    }
+}

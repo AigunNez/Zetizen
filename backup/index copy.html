@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css'>
+</head>
+
+<body>
+    <header class="py-7">
+        <div class="container mx-auto">
+            <div class="flex items-center">
+                <div class="basis-1/2">
+                    <div class="float-left">
+                        <a href="#">
+                            <img src="assets/img/logo.webp" alt="logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="basis-1/2">
+                    <div class="float-right pr-6 ">
+                        <form action="" class="flex items-center search">
+                            <input type="text" class="shadow-none w-full" placeholder="Search">
+                            <div class="flex items-center">
+                                <button type="submit" class="float-right">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                                        style="width:1.5rem;height:1.5rem" height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z">
+                                        </path>
+                                        <path
+                                            d="M11.412 8.586c.379.38.588.882.588 1.414h2a3.977 3.977 0 0 0-1.174-2.828c-1.514-1.512-4.139-1.512-5.652 0l1.412 1.416c.76-.758 2.07-.756 2.826-.002z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="navigasi sticky top-0 z-10 items-center bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 h-18 my-7 py-3">
+        <div class="container mx-auto px-6 flex justify-between items-center text-xl">
+            <div class="kiri">
+                <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden bg-orange-600 text-white" aria-controls="navbar-dropdown" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg stroke="currentColor"fill="currentColor" stroke-width="0" viewBox="0 0 24 24" style="width:1.5rem;height:1.5rem" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z"></path></svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+                    <ul class="flex items-center flex-col text-sm font-bold p-4 md:p-0 mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 text-white">
+                        <li>
+                            <a href="#" class="block py-2 px-3 text-white" aria-current="page">HOME</a>
+                        </li>
+                        <li>
+                            <button id="dropdownNavbarLink" data-dropdown-toggle="Entertainment"
+                                class="flex items-center justify-between w-full py-2 px-3 rounded text-white">ENTERTAINMENT
+                                <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 10 6">
+                                    <path stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="Entertainment" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 shadow w-44 ">
+                                <div class="py-1">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">BOOK</a>
+                                </div>
+                                <div class="py-1">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">MOVIE</a>
+                                </div>
+                                <div class="py-1">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">MUSIC</a>
+                                </div>
+                                <div class="py-1">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">TV Series</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button id="dropdownNavbarLink" data-dropdown-toggle="Event"
+                                class="flex items-center justify-between w-full py-2 px-3 rounded text-white">EVENT
+                                <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 10 6">
+                                    <path stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                            </button>
+                            <div id="Event" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 shadow w-50 ">
+                                <div class="py-1">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">ZETIZEN NATIONAL CHALLENGE</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button id="dropdownNavbarLink" data-dropdown-toggle="Explore"
+                                class="flex items-center justify-between w-full py-2 px-3 rounded text-white">EXPLORE
+                                <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 10 6">
+                                    <path stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                            </button>
+                            <div id="Explore" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 shadow w-50 ">
+                                <div class="py-1">
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">AFTER SCHOOLL</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">CAREER COACH</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">DEAR YOU</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">GET A LIFE</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">SCHOLARSHIP INFO</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button id="dropdownNavbarLink" data-dropdown-toggle="fashion"
+                                class="flex items-center justify-between w-full py-2 px-3 rounded text-white">FASHION
+                                <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 10 6">
+                                    <path stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                            </button>
+                            <div id="fashion" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 shadow w-50 ">
+                                <div class="py-1">
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">BEAUTY</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">TREND</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button id="dropdownNavbarLink" data-dropdown-toggle="food"
+                                class="flex items-center justify-between w-full py-2 px-3 rounded text-white">FOOD
+                                <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 10 6">
+                                    <path stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                            </button>
+                            <div id="food" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 shadow w-50 ">
+                                <div class="py-1">
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">FOOD & TRAVELLING</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">GAMES</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">OTOMODIF</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">SPORT AND HEALTH</a>
+                                </div>
+                            </div>
+                        </li>  
+                    </ul>
+                </div>
+            </div>
+            <div class="buat-artikel">
+                <img src="assets/img/create-article.webp" alt="" class="float-right">
+            </div>
+        </div>
+    </div>
+    <section class="konten-slider">
+        <div class="container mx-auto">
+            <div class="glide py-8 bg-opacity-60 rounded-3xl">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">
+                            <a href="#">
+                                <div class="relative flex flex-col kotak-slide rounded-3xl">
+                                    <img src="assets/img/artikel/korea.webp" alt=""
+                                        class="absolute gambar-slide rounded-3xl object-cover">
+                                    <div class="relative ml-5" style="top:60%">
+                                        <span class="text-sm text-white category p-1" style="background: #da1793;">DAILY
+                                            DOSE</span>
+                                        <h2 class="text-3xl text-white mt-5">Perayaan Anniversary BTS ke-10 Kota Seoul
+                                            Berubah Ungu</h2>
+                                        <div class="flex my-3 text-white text-white font-bold mt-3">
+                                            <div class="flex items-center gap-2 flex-1 text-sm ">
+                                                <img src="assets/img/admin/fahri.webp" alt="" class="h-5 rounded-full">
+                                                <span>Admin Zetizen</span>
+                                            </div>
+                                            <div class="flex gap-2 flex-1 text-sm items-center">
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                    viewBox="0 0 512 512" height="1em" width="1em"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    style="width: 0.8rem; height: 0.8rem;">
+                                                    <path
+                                                        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
+                                                    </path>
+                                                </svg>
+                                                15 Feb 2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="glide__slide">
+                            <a href="#">
+                                <div class="relative flex flex-col kotak-slide rounded-3xl">
+                                    <img src="assets/img/artikel/artikel1.webp" alt=""
+                                        class="absolute gambar-slide rounded-3xl object-cover">
+                                    <div class="relative ml-5" style="top:60%">
+                                        <span class="text-sm text-white category p-1" style="background: #da1793;">AFTER
+                                            SCHOOL</span>
+                                        <h2 class="text-3xl text-white mt-5">Join Class UNAIR-AAgBS UiTM</h2>
+                                        <div class="flex my-3 text-white text-white font-bold mt-3">
+                                            <div class="flex items-center gap-2 flex-1 text-sm ">
+                                                <img src="assets/img/admin/fahri.webp" alt="" class="h-5 rounded-full">
+                                                <span>Admin Zetizen</span>
+                                            </div>
+                                            <div class="flex gap-2 flex-1 text-sm items-center">
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                    viewBox="0 0 512 512" height="1em" width="1em"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    style="width: 0.8rem; height: 0.8rem;">
+                                                    <path
+                                                        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
+                                                    </path>
+                                                </svg>
+                                                16 Jun 2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="glide__slide">
+                            <a href="#">
+                                <div class="relative flex flex-col kotak-slide rounded-3xl">
+                                    <img src="assets/img/artikel/manajemen_unair.webp" alt=""
+                                        class="absolute gambar-slide rounded-3xl object-cover">
+                                    <div class="relative ml-5" style="top:55%">
+                                        <span class="text-sm text-white category p-1" style="background: #da1793;">AFTER
+                                            SCHOOL</span>
+                                        <h2 class="text-3xl text-white mt-5">Keren, Presentasi Mahasiswa Menggunakan AI di
+                                            Manajemen FEB UNAIR</h2>
+                                        <div class="flex my-3 text-white text-white font-bold mt-3">
+                                            <div class="flex items-center gap-2 flex-1 text-sm ">
+                                                <img src="assets/img/admin/fahri.webp" alt="" class="h-5 rounded-full">
+                                                <span>Admin Zetizen</span>
+                                            </div>
+                                            <div class="flex gap-2 flex-1 text-sm items-center">
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                    viewBox="0 0 512 512" height="1em" width="1em"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    style="width: 0.8rem; height: 0.8rem;">
+                                                    <path
+                                                        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
+                                                    </path>
+                                                </svg>
+                                                03 Jun 2023
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="glide__slide">
+                            <a href="#">
+                                <div class="relative flex flex-col kotak-slide rounded-3xl">
+                                    <img src="assets/img/artikel/artikel1.webp" alt=""
+                                        class="absolute gambar-slide rounded-3xl object-cover">
+                                    <div class="relative ml-5" style="top:70%">
+                                        <span class="text-lg text-white category p-1" style="background: #da1793;">After
+                                            School</span>
+                                        <br>
+                                        <span class="text-4xl text-white">Lorem ipsum dolor sit amet</span>
+                                        <br>
+                                        <div class="flex my-3 text-white text-red-200 font-bold">
+                                            <div class="flex items-center gap-2 flex-1 text-sm">
+                                                <img src="assets/img/admin.webp" alt="" class="h-5">
+                                                <span>Zetizen</span>
+                                            </div>
+                                            <div class="flex gap-2 flex-1 text-sm items-center">
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                    viewBox="0 0 512 512" height="1em" width="1em"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    style="width: 0.8rem; height: 0.8rem;">
+                                                    <path
+                                                        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
+                                                    </path>
+                                                </svg>
+                                                15 Feb 2024
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="glide__slide">
+                            <a href="#">
+                                <div class="relative flex flex-col kotak-slide rounded-3xl">
+                                    <img src="assets/img/artikel/artikel1.webp" alt=""
+                                        class="absolute gambar-slide rounded-3xl object-cover">
+                                    <div class="relative ml-5" style="top:70%">
+                                        <span class="text-lg text-white category p-1" style="background: #da1793;">After
+                                            School</span>
+                                        <br>
+                                        <span class="text-4xl text-white">Lorem ipsum dolor sit amet</span>
+                                        <br>
+                                        <div class="flex my-3 text-white text-red-200 font-bold">
+                                            <div class="flex items-center gap-2 flex-1 text-sm">
+                                                <img src="assets/img/admin.webp" alt="" class="h-5">
+                                                <span>Zetizen</span>
+                                            </div>
+                                            <div class="flex gap-2 flex-1 text-sm items-center">
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                    viewBox="0 0 512 512" height="1em" width="1em"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    style="width: 0.8rem; height: 0.8rem;">
+                                                    <path
+                                                        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
+                                                    </path>
+                                                </svg>
+                                                15 Feb 2024
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left left-4" data-glide-dir="<">
+                        <div
+                            class="h-9 w-9 bg-gray-800 rounded-xl flex justify-center items-center my-auto hover:bg-red-200 duration-300 ease-in-out">
+                            <i class="fas fa-angle-left text-red-200 text-2xl"></i>
+                        </div>
+                    </button>
+                    <button class="glide__arrow glide__arrow--right right-4" data-glide-dir=">">
+                        <div
+                            class="h-9 w-9 bg-gray-800 rounded-xl flex justify-center items-center my-auto hover:bg-red-200 duration-300 ease-in-out">
+                            <i class="fas fa-angle-right text-red-200 text-2xl"></i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto latest">
+        <div class="grid grid-cols-3 gap-4">
+            <div class="grid col-span-2">
+                <div class="text-latest cols-2 font-bold text-xl mb-3" style="margin-right:auto">LATEST</div>
+                <ul>
+                    <li class="zoom-content transition duration-500 cursor-pointer">
+                        <a href="#" class="grid grid-cols-2 gap-4 mb-7">
+                            <div class="w-full min-h-64 h-56 overflow-hidden">
+                                <img src="assets/img/artikel/jurusan.webp" alt="" class="w-full min-h-64 h-56 object-cover img-content">
+                            </div>
+                            <div>
+                                <span class="category text-white text-xs font-bold p-1" style="background-color: #4ca80b;">GET A
+                                    LIFE</span>
+                                <br>
+                                <div class="font-bold text-2xl my-4 hover:text-orange-600">
+                                    10 Tips Memiilih Jurusan Kuliah Agar Tidak Menyesal di Kemudian Hari
+                                </div>
+                                <div>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div class="flex gap-3 items-center">
+                                            <img src="assets/img/admin/fahri.webp" alt="" class="h-10 w-10 object-cover rounded-full">
+                                            <span class="text-sm md:font-sm">Admin Zetizen</span>
+                                        </div>
+                                        <div class="flex gap-2 flex-1 text-sm lg:font-base items-center">
+                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                viewBox="0 0 512 512" height="1em" width="1em"
+                                                xmlns="http://www.w3.org/2000/svg" style="width: 1rem; height: 1rem;">
+                                                <path
+                                                    d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
+                                                </path>
+                                            </svg>
+                                            14 Jun 2023
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="zoom-content">
+                        <a href="#" class="grid grid-cols-2 gap-4 mb-7">
+                            <div class="w-full min-h-64 h-56 overflow-hidden">
+                                <img src="assets/img/artikel/smartphone.webp" alt="" class="w-full min-h-64 img-content">
+                            </div>
+                            <div>
+                                <span class="category text-white text-xs font-bold p-1"
+                                    style="background-color: #4ca80b;">TECHNO</span>
+                                <br>
+                                <div class="font-bold text-xl my-4">
+                                    Cara Mempercepat Smartphone: Tips dan Trik Terbaik
+                                </div>
+                                <div>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div class="flex gap-3 items-center">
+                                            <img src="assets/img/admin/satria.webp" alt="" class="h-10 w-10 object-cover rounded-full">
+                                            <span class="text-sm md:font-sm">Satria</span>
+                                        </div>
+                                        <div class="flex gap-2 flex-1 text-sm lg:font-base items-center">
+                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                viewBox="0 0 512 512" height="1em" width="1em"
+                                                xmlns="http://www.w3.org/2000/svg" style="width: 1rem; height: 1rem;">
+                                                <path
+                                                    d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
+                                                </path>
+                                            </svg>
+                                            14 Jun 2023
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="zoom-content">
+                        <a href="#" class="grid grid-cols-2 gap-4 mb-7">
+                            <div class="w-full min-h-64 h-56 overflow-hidden">
+                            <img src="assets/img/artikel/hadiah.webp" alt="" class="w-full min-h-64 h-56 img-content">
+                            </div>
+                            <div>
+                                <span class="category text-white text-xs font-bold p-1" style="background-color: #4ca80b;">AFTER SCHOOL</span>
+                                <br>
+                                <div class="font-bold text-xl my-4">
+                                    Hadiah Uang Tunai 500 Juta, Merry Riana Berikan Penghargaan Kepada UMKM!
+                                </div>
+                                <div>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div class="flex gap-3 items-center">
+                                            <img src="assets/img/admin/satria.webp" alt="" class="h-10 w-10 object-cover rounded-full">
+                                            <span class="text-sm md:font-sm">Ciara Ariana</span>
+                                        </div>
+                                        <div class="flex gap-2 flex-1 text-sm lg:font-base items-center">
+                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"
+                                                style="width: 1rem; height: 1rem;">
+                                                <path
+                                                    d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
+                                                </path>
+                                            </svg>
+                                            06 Jun 2023
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="grid grid-cols-2 gap-4 mb-7">
+                            <img src="assets/img/artikel/pendidikan-kolaborasi.webp" alt="" class="w-full h-56">
+                            <div>
+                                <span class="category text-white text-xs font-bold p-1" style="background-color: #4ca80b;">AFTER
+                                    SCHOOL</span>
+                                <br>
+                                <div class="font-bold text-xl my-4">
+                                    Pendidikan Kolaborasi Lintas Jurusan di Universitas Airlangga
+                                </div>
+                                <div>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div class="flex gap-3 items-center">
+                                            <img src="assets/img/admin/ina.webp" alt="" class="h-10 w-10 object-cover rounded-full">
+                                            <span class="text-sm md:font-sm">Ina Shofiyanaa</span>
+                                        </div>
+                                        <div class="flex gap-2 flex-1 text-sm lg:font-base items-center">
+                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                viewBox="0 0 512 512" height="1em" width="1em"
+                                                xmlns="http://www.w3.org/2000/svg" style="width: 1rem; height: 1rem;">
+                                                <path
+                                                    d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
+                                                </path>
+                                            </svg>
+                                            29 May 2023
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="grid grid-cols-2 gap-4 mb-7">
+                            <img src="assets/img/artikel/konser_musisi.webp" alt="" class="w-full h-56">
+                            <div>
+                                <span class="category text-white text-xs font-bold p-1"
+                                    style="background-color: #4ca80b;">MUSIC</span>
+                                <br>
+                                <div class="font-bold text-xl my-4">
+                                    Kembalinya Konser Berbagai Musisi Dunia Setelah Pandemi di Indonesia
+                                </div>
+                                <div>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div class="flex gap-3 items-center">
+                                            <img src="assets/img/admin/karisma.webp" alt="" class="h-10 w-10 object-cover rounded-full">
+                                            <span class="text-sm">Karisma Ningtyas</span>
+                                        </div>
+                                        <div class="flex gap-2 flex-1 text-sm items-center">
+                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                viewBox="0 0 512 512" height="1em" width="1em"
+                                                xmlns="http://www.w3.org/2000/svg" style="width: 1rem; height: 1rem;">
+                                                <path
+                                                    d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
+                                                </path>
+                                            </svg>
+                                            20 May 2023
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="pl-4">
+                <div class="font-bold text-xl mb-5" style="margin-right:auto">MOST VIEWED</div>
+                <div class="flex mb-7 gap-3">
+                    <img src="assets/img/artikel/anime_silent.webp" alt="" class="col-span-2 w-28 h-28 object-cover">
+                    <div class="col-span-3">
+                        <span class="category text-cyan-500 text-xs font-bold p-1">Movie</span>
+                        <br>
+                        <div class="font-bold text-sm my-1">
+                            A Silent Voice, Film Anime Adaptasi Manga Karya Yoshitoki Oima
+                        </div>
+                        <div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex gap-2 flex-1 text-xs items-center">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                        viewBox="0 0 512 512" height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg" style="width: 0.8rem; height: 0.8rem;">
+                                        <path
+                                            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
+                                        </path>
+                                    </svg>
+                                    19 Sep 2016
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mb-7 gap-3">
+                    <img src="assets/img/artikel/jurrasic-world.webp" alt="" class="col-span-2 w-28 h-28 object-cover">
+                    <div class="col-span-3">
+                        <span class="category text-cyan-500 text-xs font-bold p-1">Daily Dose</span>
+                        <br>
+                        <div class="font-bold text-sm my-1">
+                            10 Tips Memilih JurusanPeryaan Anniversary BTS ke-10 Kota Seoul Berubah Ungu
+                        </div>
+                        <div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex gap-2 flex-1 text-xs items-center">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                        viewBox="0 0 512 512" height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg" style="width: 0.8rem; height: 0.8rem;">
+                                        <path
+                                            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
+                                        </path>
+                                    </svg>
+                                    13 Jun 2023
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mb-7 gap-3">
+                    <img src="assets/img/artikel/jurusan.webp" alt="" class="col-span-2 w-28 h-28 object-cover">
+                    <div class="col-span-3">
+                        <span class="category text-cyan-500 text-xs font-bold p-1">Movie</span>
+                        <br>
+                        <div class="font-bold text-sm my-1">
+                            4 Hal Ini bakal Bikin Jurussic Wrols L Fakken Kingdom Makin
+                        </div>
+                        <div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex gap-2 flex-1 text-xs items-center">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                        viewBox="0 0 512 512" height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg" style="width: 0.8rem; height: 0.8rem;">
+                                        <path
+                                            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
+                                        </path>
+                                    </svg>
+                                    08 Dec 2017
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mb-7 gap-3">
+                    <img src="assets/img/artikel/jurusan.webp" alt="" class="col-span-2 w-28 h-28 object-cover">
+                    <div class="col-span-3">
+                        <span class="category text-cyan-500 text-xs font-bold p-1">Book</span>
+                        <br>
+                        <div class="font-bold text-sm my-1">
+                            Buat yang Suka Baca Buku, 4 Perpustakaan Ini Bakal Bikin Kamu Lupa
+                        </div>
+                        <div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex gap-2 flex-1 text-xs items-center">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                        viewBox="0 0 512 512" height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg" style="width: 0.8rem; height: 0.8rem;">
+                                        <path
+                                            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
+                                        </path>
+                                    </svg>
+                                    15 Feb 2024
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mb-7 gap-3">
+                    <img src="assets/img/artikel/jurusan.webp" alt="" class="col-span-2 w-28 h-28 object-cover">
+                    <div class="col-span-3">
+                        <span class="category text-cyan-500 text-xs font-bold p-1">Movie</span>
+                        <br>
+                        <div class="font-bold text-sm my-1">
+                            10 Tips Memiilih Jurusan Kuliah Agar Tidak Menyesal di Kemudian Hari
+                        </div>
+                        <div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex gap-2 flex-1 text-xs items-center">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                        viewBox="0 0 512 512" height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg" style="width: 0.8rem; height: 0.8rem;">
+                                        <path
+                                            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
+                                        </path>
+                                    </svg>
+                                    15 Feb 2024
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto">
+        <div class="flex">
+            <div class="text-category cols-2 font-bold text-xl mb-3" style="margin-right:auto">CATEGORY</div>
+            <div class="flex gap-6 text-xl items-center font-bold">
+                <a href="#">Daily Dose</a>
+                <a href="#">Entertainment</a>
+                <a href="#">Event</a>
+                <a href="#">Explore</a>
+                <a href="#">Fashion</a>
+                <a href="#">Hobbies</a>
+                <a href="#">Sciences</a>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+            <div class="grid">
+                <div class="relative kotak-category" style="min-height: 150px;">
+                    <img src="assets/img/artikel/korea.webp" alt="" style="height:100%" class="absolute object-cover z-1 gambar-category">
+                    <div class="relative mx-8" style="top:75%">
+                        <div class="absolute category text-cyan-500 text-base font-bold">Movie</div>
+                        <br>
+                        <div class="absolute text-white text-2xl font-bold">Perayaan Anniversary BTS ke-10 Kota Seoul
+                            Berubah Ungu</div>
+                        <br>
+                        <div class="absolute mt-11">
+                            <div class="flex items-center gap-6">
+                                <div class="flex items-center gap-2">
+                                    <img src="assets/img/admin/zetizen.webp" alt="" class="w-full w-8 h-8 rounded-full">
+                                    <span class="text-base text-white">Zetizen</span>
+                                </div>
+                                <div class="flex text-white text-base items-center gap-2">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                        viewBox="0 0 512 512" height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg" style="width: 0.8rem; height: 0.8rem;">
+                                        <path
+                                            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
+                                        </path>
+                                    </svg>
+                                    15 Feb 2024
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="pl-4">
+                    <div class="flex mb-7 gap-5">
+                        <img src="assets/img/artikel/youtuber.webp" alt="" class="w-32 h-28 object-cover">
+                        <div>
+                            <span class="category text-cyan-500 text-xs font-bold p-1">Movie</span>
+                            <br>
+                            <div class="font-bold text-lg my-1">
+                                Wajib Subscribe! 5 YouTuber Indonesia yang Tinggal di Luar Negeri
+                            </div>
+                            <div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="flex gap-2 flex-1 text-xs items-center">
+                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 512 512" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg" style="width: 0.8rem; height: 0.8rem;">
+                                            <path
+                                                d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
+                                            </path>
+                                        </svg>
+                                        22 Dec 2018
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex mb-7 gap-5">
+                        <img src="assets/img/artikel/joox.webp" alt="" class="w-32 h-28 object-cover">
+                        <div>
+                            <span class="category text-cyan-500 text-xs font-bold p-1">Daily Dose</span>
+                            <br>
+                            <div class="font-bold text-lg my-1">
+                                Musisi Inide Lebih Gampang Distribusi dan Promosi dengan JOOX
+                            </div>
+                            <div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="flex gap-2 flex-1 text-xs items-center">
+                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 512 512" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg" style="width: 0.8rem; height: 0.8rem;">
+                                            <path
+                                                d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
+                                            </path>
+                                        </svg>
+                                        20 Mar 2018
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex mb-7 gap-5">
+                        <img src="assets/img/artikel/lagu_india.webp" alt="" class="w-32 h-28 object-cover">
+                        <div>
+                            <span class="category text-cyan-500 text-xs font-bold p-1">Daily Dose</span>
+                            <br>
+                            <div class="font-bold text-lg my-1">
+                                Ini dia 5 Album Indie Terbaik 2017 Versi Netizen
+                            </div>
+                            <div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="flex gap-2 flex-1 text-xs items-center">
+                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 512 512" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg" style="width: 0.8rem; height: 0.8rem;">
+                                            <path
+                                                d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
+                                            </path>
+                                        </svg>
+                                        31 Dec 2017
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex mb-7 gap-5">
+                        <img src="assets/img/artikel/jurusan.webp" alt="" class="w-32 h-28 object-cover">
+                        <div>
+                            <span class="category text-cyan-500 text-xs font-bold p-1">Daily Dose</span>
+                            <br>
+                            <div class="font-bold text-lg my-1">
+                                Wayang Kontemproer, Pengenbamgan Seni Watang Disesuaikan dengan Generasi Z
+                            </div>
+                            <div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="flex gap-2 flex-1 text-xs items-center">
+                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 512 512" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg" style="width: 0.8rem; height: 0.8rem;">
+                                            <path
+                                                d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z">
+                                            </path>
+                                        </svg>
+                                        28 Dec 2017
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto mt-8">
+        <div class="font-bold text-xl grid">
+            <span class="text-member" style="margin-right: auto;">Zetizen Member</span>
+        </div>
+        <div class="glide-member py-4 bg-opacity-60 rounded-3xl">
+            <div class="glide__track" data-glide-el="track" style="height: 325px;">
+                <ul class="glide__slides" style="height: 325px;">
+                    <li class="glide__slide">
+                        <div class="relative flex flex-col rounded-3xl kotak-member" style="height: 325px;">
+                            <img src="assets/img/admin/zetizen.webp" alt=""
+                                class="absolute gambar-member rounded-3xl object-cover">
+                            <div class="relative text-center text-xl text-white mt-64">
+                                Zetizen
+                            </div>
+                        </div>
+                    </li>
+                    <li class="glide__slide">
+                        <div class="relative flex flex-col rounded-3xl kotak-member" style="height: 325px;">
+                            <img src="assets/img/admin/zetizen.webp" alt=""
+                                class="absolute gambar-member rounded-3xl object-cover">
+                            <div class="relative text-center text-xl text-white mt-64">
+                                Zetizen2
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container mx-auto text-white relative py-14">
+            <div class="grid grid-cols-2">
+                <div class="float-left">
+                    <h2 class="text-xl font-bold">Zetizen</h2>
+                    <div class="font-normal py-4 zetizen-top">
+                        <ul>
+                            <li>
+                                <a href="#">Top Article</a>
+                            </li>
+                            <li>
+                                <a href="#">Top Member</a>
+                            </li>
+                        </ul>
+                        <ul class="flex gap-10 sosial-media py-10">
+                            <li>
+                                <a href="#">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                        viewBox="0 0 320 512" height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                        viewBox="0 0 512 512" height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                        viewBox="0 0 512 512" height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                        viewBox="0 0 576 512" height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                        viewBox="0 0 448 512" height="1em" width="1em"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM0 416a64 64 0 1 1 128 0A64 64 0 1 1 0 416zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="float-right">
+                    <h2 class="text-xl font-bold">Category</h2>
+                    <ul class="grid grid-cols-2 font-normal py-4 zetizen-top">
+                        <li>
+                            <a href="#">Daily Dose</a>
+                        </li>
+                        <li>
+                            <a href="#">Fashiont</a>
+                        </li>
+                        <li>
+                            <a href="#">Entertainment</a>
+                        </li>
+                        <li>
+                            <a href="#">Hobbies</a>
+                        </li>
+                        <li>
+                            <a href="#">EVent</a>
+                        </li>
+                        <li>
+                            <a href="#">SCiences</a>
+                        </li>
+                        <li>
+                            <a href="#">Explore</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.5.0/glide.min.js'></script>
+    <script src="assets/js/home.js"></script>
+</body>
+
+</html>

@@ -1,15 +1,30 @@
+@media (max-width: 578px) {
+    .share:hover .social-list {
+        display: absolute;
+    }
+    
+    .most-viewed {
+        margin-top: 70px;
+    }
+}
+
 .share-icon {
-    border-radius: 50%;
-    background: #fc4a00;
-    color: #fff;
-    display: block;
-    text-align: center;
     cursor: pointer;
-    font-size: 12px;
+}
+
+.social-list {
+    display: none;
+}
+
+.share:hover .social-list {
+    display: flex;
 }
 
 .list-tags li {
-    border: 1px solid black;
     border-radius: 1.5rem;
     padding: 0.25rem 0.75rem;
+}
+
+.list-related li {
+    margin-bottom: 20px;
 }
